@@ -6,14 +6,6 @@ pipeline {
         }
     }
     stages {
-        stage('Add Jenkins to Docker group') {
-            steps {
-                script {
-                    // Execute the command to add Jenkins to the Docker group using sudo
-                    sh 'sudo usermod -aG docker jenkins'
-                }
-            }
-        }
         stage('Checkout') {
             steps {
                 sh 'echo passed'
